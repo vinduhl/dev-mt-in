@@ -23,10 +23,10 @@ Director, Web @ DevMountain
 
 ## Application Design
 
-This is located in the images folder in this project.
+These is located in the images folder in this project.
 
 ![Application Design](https://github.com/DevMountain/dev-mt-in/blob/master/images/DevMtn-Social-app.jpg?raw=true, "Application Design")
-
+![Style Guide](https://github.com/DevMountain/dev-mt-in/blob/master/images/Style-Guide.jpg?raw=true, "Style Guide")
 ## Requirements
 
 ### Day 1:
