@@ -26,7 +26,10 @@ Director, Web @ DevMountain
 These is located in the images folder in this project.
 
 ![Application Design](https://github.com/DevMountain/dev-mt-in/blob/master/images/DevMtn-Social-app.jpg?raw=true, "Application Design")
-![Style Guide](https://github.com/DevMountain/dev-mt-in/blob/master/images/Style-Guide.jpg?raw=true, "Style Guide")
+![Color Palette](https://github.com/DevMountain/dev-mt-in/blob/master/images/ColorPalette.jpg?raw=true, "Color Palette")
+![Fonts](https://github.com/DevMountain/dev-mt-in/blob/master/images/Fonts.jpg?raw=true, "Fonts")
+![Text Styles](https://github.com/DevMountain/dev-mt-in/blob/master/images/TextStyles.jpg?raw=true, "Text Styles")
+
 ## Requirements
 
 ### Day 1:
