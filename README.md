@@ -23,7 +23,7 @@ Director, Web @ DevMountain
 
 ## Application Design
 
-These is located in the images folder in this project.
+These are located in the images folder in this project.
 
 ![Application Design](https://github.com/DevMountain/dev-mt-in/blob/master/images/DevMtn-Social-app.jpg?raw=true, "Application Design")
 ![Color Palette](https://github.com/DevMountain/dev-mt-in/blob/master/images/ColorPalette.jpg?raw=true, "Color Palette")
