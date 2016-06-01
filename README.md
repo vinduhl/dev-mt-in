@@ -1,4 +1,4 @@
-# Dev-mt-in
+## Dev-mt-in
 
 __A note to students and employers__
 
@@ -16,10 +16,10 @@ Because of this we feel this project will be worth putting in your portfolio.
 Good luck and work hard!
 
 Sincerely,
-Jeremy Robertson
-Director, Web @ DevMountain
 
-# Requirements
+Jeremy Robertson
+
+Director, Web @ DevMountain
 
 ## Application Design
 
@@ -27,9 +27,8 @@ This is located in the images folder in this project.
 
 ![Application Design](https://github.com/DevMountain/dev-mt-in/blob/master/images/DevMtn-Social-app.jpg?raw=true, "Application Design")
 
-## Requirements
 
-### Day 1:
+## Day 1:
 __Bottom Nav__
 * Navigation is controlled at the bottom of the screen
 * User can navigate between `View Friends` `Find Friends` and `Update Profile`
@@ -52,7 +51,7 @@ __Update Profile__
 * User can change their fullname, tagline, profile pic, and bio
 
 
-### Day 2:
+## Day 2:
 Use two services for this day.  One to track people and one to track friends.
 Use local storage to keep track of the data.
 
@@ -78,7 +77,7 @@ __Find Friends View__
 * User can select a person by hovering then selecting View Profile
     * Page navigates to friend profile View when `View Profile` is clicked
 
-### Day 3
+## Day 3
 There are no new visuals and pages to add, but currently all our data is stored locally. Use the following API to POST, GET, PUT, and DELETE user profiles and friends:
 
 #### API Urls
