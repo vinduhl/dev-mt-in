@@ -1,0 +1,13 @@
+<div id="left-panel">
+  <profile-directive user="loggedInUserProfile"></profile-directive>
+</div>
+
+<div id="right-panel">
+  Profile Settings
+  <br/><br/>
+  <input class="form-field" ng-model="profile.name" type="text" placeholder="Full Name"/><br/>
+  <input class="form-field" ng-model="profile.tagline" type="text" placeholder="Tagline"/><br/>
+  <input class="form-field" ng-model="profile.profileImageUrl" type="text" placeholder="Profile Image Url"/><br/>
+  <textarea ng-model="profile.bio" placeholder="Bio"></textarea><br/><br/>
+  <button class="submit-button" ng-click="saveChangedProfile(profile)">Save Changes</button>
+</div>

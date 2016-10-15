@@ -1,0 +1,106 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-container {
+  width: 700px;
+  border: 1px solid black;
+  margin: 0px auto;
+}
+
+.company-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bottom-menu {
+  list-style-type: none;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+.menu-item {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+
+#content-section {
+  display: inline-block;
+  height: 550px;
+  width: 100%;
+}
+
+
+#left-panel {
+  /*width: 345px;*/
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#right-panel {
+  /*width: 345px;*/
+  width: 45%;
+  height: 100%;
+  float: right;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#top-navigation {
+  height: 60px;
+}
+
+.profile-image {
+  display: block;
+  max-width:190px;
+  max-height:190px;
+  width: auto;
+  height: auto;
+}
+
+.user-name {
+  font-family: "Lora", serif;
+  font-size: 38.4px;
+  line-height: 46px;
+  color: #272727;
+}
+
+.user-tagline {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10.2px;
+  line-height: 14px;
+  font-weight:  bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #000000;
+}
+
+.user-bio {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10.2px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.form-field {
+  width: 250px;
+  height: 25px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border: 1px solid #D7D7D7;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 250px;
+  height: 150px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border: 1px solid #D7D7D7;
+  margin-top: 5px;
+}
