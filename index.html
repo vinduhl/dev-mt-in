@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" ng-app="socialApp">
 <head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>DevMtin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Document</title>
 </head>
-
 <body>
 
-  
+<div class="main-container">
+  <div id="top-navigation">
+    <div class="company-title">DevMountain</div>
+  </div>
+
+  <div id="content-section" >
+    <ui-view></ui-view>
+  </div>
+
+  <div id="bottom-navigation">
+    <ul class="bottom-menu">
+      <li class="menu-item">View Friends</li>
+      <li class="menu-item">Find Friends</li>
+      <li class="menu-item">Update Profile</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="./services/profileService.js"></script>
+<script src="./views/createProfile/newProfileCtrl.js"></script>
+<script src="./views/showProfile/profileCtrl.js"></script>
+<script src="./views/searchFriends/friendSearchCtrl.js"></script>
+<script src="./views/showFriends/friendsListCtrl.js"></script>
+<script src="./directives/profileDirective.js"></script>
 </body>
 </html>
