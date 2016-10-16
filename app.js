@@ -16,7 +16,7 @@ app.config( function( $stateProvider, $urlRouterProvider ) {
       controller: "newProfileCtrl"
     })
     .state("updateProfile", {
-      url: "/updateProfile",
+      url: "/updateProfile/:menuItemId",
       templateUrl: "./views/editProfile/editForm_partial.html",
       controller: "editProfileCtrl"
     })

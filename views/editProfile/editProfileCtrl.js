@@ -1,4 +1,4 @@
-app.controller("editProfileCtrl", function($scope, $state, profileService) {
+app.controller("editProfileCtrl", function($scope, $state, $stateParams, profileService, menuService) {
 
   var loggedInProfile = profileService.getLoggedInUserProfile();
   if(!loggedInProfile) {
@@ -6,6 +6,8 @@ app.controller("editProfileCtrl", function($scope, $state, profileService) {
   }
   $scope.loggedInUserProfile = loggedInProfile;
   $scope.profile = profileService.cloneProfile(loggedInProfile);
+
+  menuService.setCurrentMenuItem($stateParams.menuItemId);
 
   $scope.saveChangedProfile = function(profile) {
     if(profileService.updateLoggedInUserProfile(profile)) { // i.e. success

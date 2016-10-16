@@ -26,6 +26,13 @@ body {
   text-align: center;
 }
 
+.menu-item-selected {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 #content-section {
   display: inline-block;
   height: 550px;

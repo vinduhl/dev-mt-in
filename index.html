@@ -21,9 +21,7 @@
 
   <div id="bottom-navigation">
     <ul class="bottom-menu">
-      <li class="menu-item">View Friends</li>
-      <li class="menu-item">Find Friends</li>
-      <li class="menu-item" ui-sref="updateProfile">Update Profile</li>
+      <bottom-navigation-directive menu-item="selectedMenuItem"></bottom-navigation-directive>
     </ul>
   </div>
 </div>
@@ -34,11 +32,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 <script src="app.js"></script>
 <script src="./services/profileService.js"></script>
+<script src="./services/menuService.js"></script>
 <script src="./views/createProfile/newProfileCtrl.js"></script>
 <script src="./views/showProfile/profileCtrl.js"></script>
 <script src="./views/searchFriends/friendSearchCtrl.js"></script>
 <script src="./views/showFriends/friendsListCtrl.js"></script>
 <script src="./views/editProfile/editProfileCtrl.js"></script>
 <script src="./directives/profileDirective.js"></script>
+<script src="./directives/bottomNavigationDirective.js"></script>
 </body>
 </html>
