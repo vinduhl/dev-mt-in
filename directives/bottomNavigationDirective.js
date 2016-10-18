@@ -1,25 +1,30 @@
-app.directive("bottomNavigationDirective", function() {
+app.directive("bottomNavigationDirective", ['menuService', function(menuService) {
   return {
     templateUrl: "./directives/bottomNavigation_dir.html",
-    scope: {},
+    scope: { },
     link: function(scope, element, attr) {
 
+      _menuService = menuService;
       const menuItemList = document.getElementById("bottomMenuItems")
         .getElementsByTagName("li");
 
       for(let i = 0; i < menuItemList.length; i++) {
+          menuItemList[i].onclick = showIfActivated;
+      }
 
-          menuItemList[i].onclick = function() { // use this!
-            for(let i = 0; i < menuItemList.length; i++) {
-              if(menuItemList[i].id === this.id) {
-                menuItemList[i].className = "menu-item-selected";
-              } else {
-                menuItemList[i].className = "menu-item";
-              }
-            }
+      function showIfActivated() {
+        let currentState = _menuService.getCurrentState();
+        for(let i = 0; i < menuItemList.length; i++) {
+          console.log("2 currentState=", currentState);
+          if(currentState &&
+            this.id === currentState) {
+            this.className = "menu-item-selected";
+          } else {
+            this.className = "menu-item";
           }
+        }
       }
 
     }
   }
-})
+}]);

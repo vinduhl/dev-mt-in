@@ -1,11 +1,11 @@
 app.service("menuService", function() {
-  var currentMenuItem = "";
+  let menuDirective;
 
-  this.getCurrentMenuItem = function() {
-    return currentMenuItem;
+  this.getMenuDirective = function() {
+    return menuDirective;
   }
 
-  this.setCurrentMenuItem = function(menuItemId) {
-    currentMenuItem = menuItemId;
+  this.setMenuDirective = function(directive) {
+    menuDirective = directive;
   }
 });

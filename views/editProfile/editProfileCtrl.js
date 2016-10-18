@@ -1,4 +1,6 @@
-app.controller("editProfileCtrl", function($scope, $state, $stateParams, profileService) {
+app.controller("editProfileCtrl", function($scope, $state, $stateParams, profileService, menuService) {
+
+  menuService.setCurrentState($state.current.name);
 
   var loggedInProfile = profileService.getLoggedInUserProfile();
   if(!loggedInProfile) {
