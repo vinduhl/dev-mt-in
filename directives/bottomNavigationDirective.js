@@ -2,19 +2,31 @@ app.directive("bottomNavigationDirective", function() {
   return {
     templateUrl: "./directives/bottomNavigation_dir.html",
     scope: {
-      menuItem: "@"
+      menuItem: "="
     },
     link: function(scope, element, attr) {
-      console.log("menuItem=", menuItem);
+      console.log("menuItem=", scope.menuItem);
 
-      var menuItemList = document.getElementById("bottomMenuItems")
+      const menuItemList = document.getElementById("bottomMenuItems")
         .getElementsByTagName("li");
-      for(var i = 0; i < menuItemList.length; i++) {
-          if(menuItemList[i].id === menuItem) {
-            menuItemList[i].className = "menu-item-selected";
-          } else {
-            menuItemList[i].className = "menu-item";
+
+      for(let i = 0; i < menuItemList.length; i++) {
+
+          menuItemList[i].onclick = function(elem) { // use this!
+            for(let i = 0; i < menuItemList.length; i++) {
+              if(menuItemList[i].id === getMenuItem()) {
+                console.log("here.");
+                menuItemList[i].className = "menu-item-selected";
+              } else {
+                console.log("here2.");
+                menuItemList[i].className = "menu-item";
+              }
+            }
           }
+      }
+
+      function getMenuItem() {
+        return scope.menuItem;
       }
     }
   }
