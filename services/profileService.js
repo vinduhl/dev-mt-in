@@ -1,39 +1,53 @@
 app.service("profileService", function() {
 
-  var profiles = [];
+  var friendsProfiles = [
+    {
+      name: "Regine Velasquez",
+      tagline: "Every day is a great day!",
+      profileImageUrl: "http://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/lg/public/2015/09/01/miss-piggy.png",
+      bio: "test bio"
+    },
+    {
+      name: "Chris Smith",
+      tagline: "I approve!",
+      profileImageUrl: "https://pbs.twimg.com/profile_images/654052237929414656/YUI--ZV8.jpg",
+      bio: "test bio 2"
+    },
+    {
+      name: "John Hershey",
+      tagline: "Chocolates is my business.",
+      profileImageUrl: "http://www.wikihow.com/images/4/4a/Draw-Stewie-from-Family-Guy-Step-17.jpg",
+      bio: "test bio 3"
+    }
+  ];
+
+
+  var loggedInUserProfile;
 
   this.addProfile = function(profile) {
-    profiles.push(profile);
-    console.log(profiles);
+    if(profile.isLoggedInUser) {
+      loggedInUserProfile = profile;
+    } else {
+      friendsProfiles.push(profile);
+    }
+
+    console.log(friendsProfiles);
   }
 
   this.searchProfile = function(name) {
-    for(var i = 0; i < profiles.length; i++) {
-      if(profiles[i].name === name) {
-        return profiles[i];
+    for(var i = 0; i < friendsProfiles.length; i++) {
+      if(friendsProfiles[i].name === name) {
+        return friendsProfiles[i];
       }
     }
   }
 
   this.getLoggedInUserProfile = function() {
-    //TODO: try a better lookup here instead of loop because this is ugly
-    for(var i = 0; i < profiles.length; i++) {
-      if(profiles[i].isLoggedInUser) {
-        return profiles[i];
-      }
-    }
-    return null;
+    return loggedInUserProfile;
   }
 
   this.updateLoggedInUserProfile = function(profile) {
-    //TODO: try a better lookup here instead of loop, maybe use getLoggedInUserProfile and update by reference??
-    for(var i = 0; i < profiles.length; i++) {
-      if(profiles[i].isLoggedInUser) {
-        profiles[i] = profile;
-        return true; //success
-      }
-    }
-    return false; // couldn't find the profile, duh
+    loggedInUserProfile = profile;
   }
 
   this.cloneProfile = function(profile) {
@@ -50,12 +64,5 @@ app.service("profileService", function() {
     return copy;
   }
 
-  // function Profile(name) {
-  //   this.name = name;
-  //   this.tagline = "";
-  //   this.profileImageUrl = "";
-  //   this.bio = "";
-  //   this.isLoggedInUser = false;
-  // }
 
   });
