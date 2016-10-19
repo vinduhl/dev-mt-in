@@ -1,6 +1,6 @@
 app.controller("editProfileCtrl", function($scope, $state, $stateParams, profileService, menuService) {
 
-  menuService.setCurrentState($state.current.name);
+  //menuService.setCurrentState($state.current.name);
 
   var loggedInProfile = profileService.getLoggedInUserProfile();
   if(!loggedInProfile) {
@@ -8,7 +8,9 @@ app.controller("editProfileCtrl", function($scope, $state, $stateParams, profile
   }
   $scope.loggedInUserProfile = loggedInProfile;
   $scope.profile = profileService.cloneProfile(loggedInProfile);
-
+  console.log("About to execute menuService.getMenuDirectiveCallback");
+  menuService.getMenuDirectiveCallback()($state.current.name);
+  console.log("finished execution of menuService.getMenuDirectiveCallback");
   //menuService.setCurrentMenuItem($stateParams.menuItemId);
 
   $scope.saveChangedProfile = function(profile) {

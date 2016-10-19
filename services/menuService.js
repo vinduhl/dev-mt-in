@@ -1,11 +1,13 @@
 app.service("menuService", function() {
-  let menuDirective;
+  let menuDirectiveCallback;
 
-  this.getMenuDirective = function() {
-    return menuDirective;
+  this.getMenuDirectiveCallback = function() {
+    return !menuDirectiveCallback ?
+      function(){ console.log("menuDirectiveCallback not set") }
+      : menuDirectiveCallback;
   }
 
-  this.setMenuDirective = function(directive) {
-    menuDirective = directive;
+  this.setMenuDirectiveCallback = function(directiveCallback) {
+    menuDirectiveCallback = directiveCallback;
   }
 });
