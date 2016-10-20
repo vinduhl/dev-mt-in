@@ -1,4 +1,4 @@
-app.controller("profileCtrl", function($scope, $state, profileService) {
+app.controller("profileCtrl", function($scope, $state, profileService, menuService) {
 
   //$scope.currentState = $state.current.name;
 
@@ -6,6 +6,8 @@ app.controller("profileCtrl", function($scope, $state, profileService) {
   if(!loggedInProfile) {
     $state.go("createProfile");
   }
+
+  menuService.getMenuDirectiveCallback()($state.current.name);
 
   $scope.loggedInUserProfile = loggedInProfile;
 })

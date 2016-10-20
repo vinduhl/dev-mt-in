@@ -2,6 +2,8 @@ app.controller("newProfileCtrl", function($scope, $state, profileService, menuSe
   //console.log("$scope.profile=", $scope.profile);
   //menuService.setCurrentState($state.current.name);
 
+  menuService.getMenuDirectiveCallback()($state.current.name);
+
   $scope.addNewProfile = function(profile) {
     console.log(profile);
     if(profile) {

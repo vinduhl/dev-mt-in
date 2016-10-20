@@ -20,4 +20,9 @@ app.config( function( $stateProvider, $urlRouterProvider ) {
       templateUrl: "./views/editProfile/editForm_partial.html",
       controller: "editProfileCtrl"
     })
+    .state("friendsList", {
+      url: "/friendsList",
+      templateUrl: "./views/showFriends/friendsList_partial.html",
+      controller: "friendsListCtrl"
+    })
 });

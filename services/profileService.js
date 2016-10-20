@@ -64,5 +64,8 @@ app.service("profileService", function() {
     return copy;
   }
 
+  this.getFiendsList = function() {
+    return friendsProfiles;
+  }
 
   });
